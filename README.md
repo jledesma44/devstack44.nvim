@@ -8,3 +8,7 @@ Things that I plan to modify:
 The current keymaps that I have in my configuration come from someone else's configuraions and I will change some of these keymaps to my own prefernces.
 
 There are a couple of plugins that I want to use in my configuration but I need to research a bit more before I install them.
+
+Items that I still plan to add to my configuration:
+1. snippets
+2. ftplugins
