@@ -9,13 +9,17 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 local opts = { noremap = true, silent = true }
 
 -- save file
-vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', opts)
+--vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', opts)
 
 -- save file without auto-formatting
 vim.keymap.set('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts)
 
--- quit file 
-vim.keymap.set('n', '<C-q>', '<cmd> q <CR>', opts)
+-- save and quit files
+--vim.keymap.set('n', '<C-q>', '<cmd> q <CR>', opts)
+vim.keymap.set('n', '<leader>wq', ':wq<CR>') -- save and quit
+vim.keymap.set('n', '<leader>q', ':q!<CR>') -- quit without saving
+vim.keymap.set('n', '<leader>w', ':w<CR>') -- save
+vim.keymap.set('n', 'gx', ':!open <c-r><c-a><CR>') -- open URL under cursor
 
 -- delete single character without copying into register
 vim.keymap.set('n', 'x', '"_x', opts)
@@ -34,7 +38,7 @@ vim.keymap.set('n', '<Down>', ':resize +2<CR>', opts)
 vim.keymap.set('n', '<Left>', ':vertical resize -2<CR>', opts)
 vim.keymap.set('n', '<Right>', ':vertical resize +2<CR>', opts)
 
--- Use jj to esc insert mode 
+-- Use jj to esc insert mode
 vim.keymap.set('i', 'jj', '<Esc>', { desc = 'escapes with jj' })
 
 -- Buffers
@@ -75,4 +79,4 @@ vim.keymap.set('v', 'p', '"_dP', opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+vim.keymap.set('n', '<leader>qq', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
