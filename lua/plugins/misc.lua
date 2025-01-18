@@ -57,4 +57,10 @@ return {
       vim.cmd [[autocmd FileType markdown,mkd call pencil#init({'wrap', 'soft'})]]
     end,
   },
+  -- Maximize and Restore Current Window
+  {
+    -- https://github.com/szw/vim-maximizer
+    'szw/vim-maximizer',
+    event = 'VeryLazy',
+  },
 }
