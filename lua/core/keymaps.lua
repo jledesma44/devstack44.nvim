@@ -14,6 +14,9 @@ local opts = { noremap = true, silent = true }
 -- save file without auto-formatting
 vim.keymap.set('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts)
 
+-- Vim-maximizer
+vim.keymap.set('n', '<leader>sm', ':MaximizerToggle<CR>') -- toggle maximize tab
+
 -- save and quit files
 --vim.keymap.set('n', '<C-q>', '<cmd> q <CR>', opts)
 vim.keymap.set('n', '<leader>wq', ':wq<CR>') -- save and quit
