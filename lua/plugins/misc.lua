@@ -42,10 +42,6 @@ return {
     end,
   },
   {
-    --Goyo for markdown files removes distractions
-    'junegunn/goyo.vim',
-  },
-  {
     'preservim/vim-pencil',
     lazy = false,
     config = function()
