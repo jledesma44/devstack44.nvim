@@ -57,6 +57,10 @@ return {
       vim.cmd [[autocmd FileType markdown,mkd call pencil#init({'wrap', 'soft'})]]
     end,
   },
+  {
+    'karb94/neoscroll.nvim',
+    opts = {},
+  },
   -- Maximize and Restore Current Window
   {
     -- https://github.com/szw/vim-maximizer
