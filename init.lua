@@ -26,4 +26,5 @@ require('lazy').setup {
   require 'plugins.indent-blankline',
   require 'plugins.zen-mode',
   require 'plugins.misc',
+  require 'lua.plugins.vim-pencil',
 }
