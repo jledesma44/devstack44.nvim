@@ -17,6 +17,10 @@ vim.keymap.set('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts)
 -- Vim-maximizer
 vim.keymap.set('n', '<leader>sm', ':MaximizerToggle<CR>') -- toggle maximize tab
 
+--Zen Mode
+vim.keymap.set('n', '<leader>zm', ':ZenMode<CR>') -- toggle Zen Mode
+vim.keymap.set('n', '<leader>ps', ':PencilSoft<CR>') -- toggle PencilSoft
+
 -- save and quit files
 --vim.keymap.set('n', '<C-q>', '<cmd> q <CR>', opts)
 vim.keymap.set('n', '<leader>wq', ':wq<CR>') -- save and quit
