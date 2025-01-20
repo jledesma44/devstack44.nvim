@@ -1,8 +1,11 @@
 vim.opt.spell = true
 vim.opt.number = false
-vim.cmd ':Goyo 80x80%'
+vim.opt.linebreak = true
+vim.opt.wrap = true
+vim.opt.softwrap = true
+vim.cmd ':PencilSoft'
 
 -- Check if Pencil is actually loaded before calling it
-if vim.fn.exists ':Pencil' == 2 then
-  vim.cmd 'PencilSoft'
+if vim.fn.exists 'Pencil' == 2 then
+  vim.cmd ':PencilSoft'
 end
