@@ -32,7 +32,7 @@ return {
         -- statusline will be shown only if 'laststatus' == 3
         laststatus = 3, -- turn off the statusline in zen mode
       },
-      twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
+      twilight = { enabled = false }, -- enable to start Twilight when zen mode opens
       gitsigns = { enabled = false }, -- disables git signs
       tmux = { enabled = false }, -- disables the tmux statusline
       todo = { enabled = false }, -- if set to "true", todo-comments.nvim highlights will be disabled
@@ -42,7 +42,7 @@ return {
       -- - listen_on unix:/tmp/kitty
       kitty = {
         enabled = true,
-        font = '+2', -- font size increment
+        font = '+0', -- font size increment
       },
     },
     -- callback where you can add custom code when the Zen window opens
