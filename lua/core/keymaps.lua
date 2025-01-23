@@ -26,6 +26,7 @@ vim.keymap.set('n', '<leader>ps', ':PencilSoft<CR>') -- toggle PencilSoft
 vim.keymap.set('n', '<leader>wq', ':wq<CR>') -- save and quit
 vim.keymap.set('n', '<leader>q', ':q!<CR>') -- quit without saving
 vim.keymap.set('n', '<leader>w', ':w<CR>') -- save
+vim.keymap.set('n', '<leader>ww', ':w!<CR>') -- save
 vim.keymap.set('n', 'gx', ':!open <c-r><c-a><CR>') -- open URL under cursor
 
 -- delete single character without copying into register
