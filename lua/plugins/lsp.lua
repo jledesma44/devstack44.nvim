@@ -135,6 +135,38 @@ return {
       end,
     })
 
+    --================ Completions for current buffer using commandline and search  =====================
+
+    --local cmp_action = require('lsp-zero').cmp_action()
+    local cmp = require 'cmp'
+    local cmp_select = { behavior = cmp.SelectBehavior.Select }
+
+    require('luasnip.loaders.from_vscode').lazy_load()
+
+    -- `/` cmdline setup.
+    cmp.setup.cmdline('/', {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = {
+        { name = 'buffer' },
+      },
+    })
+
+    -- `:` cmdline setup.
+    cmp.setup.cmdline(':', {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = cmp.config.sources({
+        { name = 'path' },
+      }, {
+        {
+          name = 'cmdline',
+          option = {
+            ignore_cmds = { 'Man', '!' },
+          },
+        },
+      }),
+    })
+    --=========================================================================================
+
     -- LSP servers and clients are able to communicate to each other what features they support.
     --  By default, Neovim doesn't support everything that is in the LSP specification.
     --  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
