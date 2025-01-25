@@ -27,4 +27,5 @@ require('lazy').setup {
   require 'plugins.zen-mode',
   require 'plugins.misc',
   require 'plugins.vim-pencil',
+  require 'plugins.noice',
 }
