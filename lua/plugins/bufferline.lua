@@ -3,6 +3,7 @@ return {
   dependencies = {
     'moll/vim-bbye',
     'nvim-tree/nvim-web-devicons',
+    'famiu/bufdelete.nvim',
   },
   config = function()
     require('bufferline').setup {
@@ -13,12 +14,12 @@ return {
             filetype = 'neo-tree',
             text = 'Explorer',
             --highlight = 'Directory',
-            separator = false,
+            separator = true,
           },
         }, -- set to "tabs" to only show tabpages instead
         themable = true, -- allows highlight groups to be overriden i.e. sets highlights as default
         numbers = 'none', -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
-        close_command = 'Bdelete! %d', -- can be a string | function, see "Mouse actions"
+        close_command = require('bufdelete').bufdelete, -- can be a string | function, see "Mouse actions"
         buffer_close_icon = '✗',
         close_icon = '✗',
         path_components = 1, -- Show only the file name without the directory
