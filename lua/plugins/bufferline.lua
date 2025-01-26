@@ -14,7 +14,7 @@ return {
             filetype = 'neo-tree',
             text = 'Explorer',
             --highlight = 'Directory',
-            separator = true,
+            separator = false,
           },
         }, -- set to "tabs" to only show tabpages instead
         themable = true, -- allows highlight groups to be overriden i.e. sets highlights as default
