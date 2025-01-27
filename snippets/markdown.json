@@ -1,0 +1,14 @@
+{
+  "test": {
+    "prefix": "test",
+    "body": [
+      ".container {",
+      "  max-width: ${1:1100px};",
+      "  padding-inline: ${2:40px};",
+      "  margin-inline: ${3:auto};",
+      "}",
+      "$0"
+    ],
+    "description": "json preset test styles"
+  }
+}
