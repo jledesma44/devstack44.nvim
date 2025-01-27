@@ -1,13 +1,14 @@
-return { -- Autocompletion
+return { -- ==Autocompletion==============
   'hrsh7th/nvim-cmp',
   dependencies = {
-    -- Snippet Engine & its associated nvim-cmp source
+    -- ===== Snippet Engine & its associated nvim-cmp source===========
     {
       'L3MON4D3/LuaSnip',
       build = (function()
         -- Build Step is needed for regex support in snippets.
         -- This step is not supported in many windows environments.
         -- Remove the below condition to re-enable on windows.
+
         if vim.fn.has 'win32' == 1 or vim.fn.executable 'make' == 0 then
           return
         end
@@ -25,11 +26,8 @@ return { -- Autocompletion
         },
       },
     },
+    -- List of cmp plugins needed for different completion capabilities add the ones that you need for you config. They are split into mutiple repos for maintenance purposes.
     'saadparwaiz1/cmp_luasnip',
-
-    -- Adds other completion capabilities.
-    --  nvim-cmp does not ship with all sources by default. They are split
-    --  into multiple repos for maintenance purposes.
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
@@ -75,6 +73,8 @@ return { -- Autocompletion
         end,
       },
       completion = { completeopt = 'menu,menuone,noinsert' },
+
+      --Keymappings =======================================================
 
       -- For an understanding of why these mappings were
       -- chosen, you will need to read `:help ins-completion`
@@ -170,6 +170,19 @@ return { -- Autocompletion
           })[entry.source.name]
           return vim_item
         end,
+      },
+      confirm_opts = {
+        behavior = cmp.ConfirmBehavior.Replace,
+        select = false,
+      },
+      window = {
+        completion = {
+          border = 'rounded',
+          scrollbar = false,
+        },
+        documentation = {
+          border = 'rounded',
+        },
       },
     }
   end,
