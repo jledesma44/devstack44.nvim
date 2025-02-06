@@ -6,6 +6,8 @@ return { -- Highlight, edit, and navigate code
   opts = {
     ensure_installed = {
       'lua',
+      'c',
+      'query',
       'python',
       'javascript',
       'typescript',
@@ -17,7 +19,6 @@ return { -- Highlight, edit, and navigate code
       'dockerfile',
       'toml',
       'json',
-      'java',
       'groovy',
       'go',
       'gitignore',
@@ -49,4 +50,13 @@ return { -- Highlight, edit, and navigate code
   --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
   --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
   --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = '<Leader>ss', -- set to `false` to disable one of the mappings
+      node_incremental = '<Leader>si',
+      scope_incremental = '<Leader>sc',
+      node_decremental = '<Leader>sd',
+    },
+  },
 }
