@@ -21,6 +21,9 @@ vim.keymap.set('n', '<leader>sm', ':MaximizerToggle<CR>') -- toggle maximize tab
 vim.keymap.set('n', '<leader>zm', ':ZenMode<CR>') -- toggle Zen Mode
 vim.keymap.set('n', '<leader>ps', ':PencilSoft<CR>') -- toggle PencilSoft
 
+--YankBank (clipboard history)
+vim.keymap.set('n', '<leader>y', '<cmd>YankBank<CR>', opts)
+
 -- save and quit files
 --vim.keymap.set('n', '<C-q>', '<cmd> q <CR>', opts)
 vim.keymap.set('n', '<leader>wq', ':wq<CR>') -- save and quit
@@ -50,8 +53,8 @@ vim.keymap.set('n', '<Right>', ':vertical resize +2<CR>', opts)
 vim.keymap.set('i', 'jj', '<Esc>', { desc = 'escapes with jj' })
 
 -- Buffers
-vim.keymap.set('n', '<Tab>', ':bnext<CR>', opts)
-vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', opts)
+vim.keymap.set('n', '<C-i>', ':bnext<CR>', opts)
+vim.keymap.set('n', '<C-u>', ':bprevious<CR>', opts)
 vim.keymap.set('n', '<leader>c', ':Bdelete<CR>', opts) -- close buffer
 vim.keymap.set('n', '<leader>b', '<cmd> enew <CR>', opts) -- new buffer
 
