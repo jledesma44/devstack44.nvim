@@ -28,4 +28,5 @@ require('lazy').setup {
   require 'plugins.misc',
   require 'plugins.vim-pencil',
   require 'plugins.noice',
+  require 'plugins.yankbank',
 }
